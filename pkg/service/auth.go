@@ -1,8 +1,6 @@
 package service
 
-import (
-	"cook-helper/repository"
-)
+import "cook-helper/pkg/repository"
 
 // AuthService is authorization service implementation
 type AuthService struct {

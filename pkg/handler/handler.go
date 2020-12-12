@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"cook-helper/service"
+	"cook-helper/pkg/service"
 	"net/http"
 
 	"github.com/go-chi/chi"

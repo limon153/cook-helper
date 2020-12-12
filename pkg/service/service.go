@@ -1,8 +1,6 @@
 package service
 
-import (
-	"cook-helper/repository"
-)
+import "cook-helper/pkg/repository"
 
 // Authorization container all service methods
 type Authorization interface {

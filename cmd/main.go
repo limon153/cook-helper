@@ -1,9 +1,9 @@
 package main
 
 import (
-	"cook-helper/handler"
-	"cook-helper/repository"
-	"cook-helper/service"
+	"cook-helper/pkg/handler"
+	"cook-helper/pkg/repository"
+	"cook-helper/pkg/service"
 	"log"
 	"net"
 	"net/http"
