@@ -12,11 +12,13 @@ import (
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"github.com/spf13/viper"
+	"gopkg.in/go-playground/validator.v9"
 )
 
 const port = "3000"
 
 func main() {
+	validate := validator.New()
 
 	if err := initConfig(); err != nil {
 		log.Fatalf("error initializing configs: %s", err.Error())
@@ -42,7 +44,7 @@ func main() {
 
 	repo := repository.New(db)
 	services := service.New(repo)
-	handlers := handler.New(services)
+	handlers := handler.New(services, validate)
 	router := handlers.InitRoutes()
 
 	log.Printf("Serving on port:%s", port)

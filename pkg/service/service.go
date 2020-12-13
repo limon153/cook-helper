@@ -1,9 +1,13 @@
 package service
 
-import "cook-helper/pkg/repository"
+import (
+	"cook-helper/pkg/models"
+	"cook-helper/pkg/repository"
+)
 
 // Authorization container all service methods
 type Authorization interface {
+	CreateUser(user models.User) (int, error)
 }
 
 // Service contains all services
